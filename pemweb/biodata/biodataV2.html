@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ketoprak nyaring bunyinya
+		</title>
+		<style>
+			body	{
+				background-color:powderblue;
+				font-family:tahoma;
+				}
+	
+			h1	{
+				font-family:arial;
+				color:darkblue;
+				font-size:300%;
+				}
+
+			.utkmatkul	{
+				background-color:lightsteelblue;
+				}
+            
+		</style>
+	</head>
+
+
+	<body>
+		<br>
+
+		<h1 align="center">
+			Biodata Mahasiswa
+		</h1>
+		
+		<hr width="700">
+
+		<table align="center" border="0" width="590">
+			<tr>
+				<th rowspan="7"><img src="../minggu2/dodle.jpg" width=200 height=300>  </th>
+	
+			</tr>
+
+			<tr>
+				<td><b>Nama</td>
+				<td>: Risky Luthfan Maladzi</td>
+			</tr>
+
+			<tr>
+				<td><b>N.I.M.</td>
+				<td>: A11.2022.14734</td>
+			</tr>
+
+			<tr>
+				<td><b>Kelp.</td>
+				<td>: A11.4119</td>
+			</tr>
+
+			<tr>
+				<td><b>Lahir</td>
+				<td>: Semarang, 29 Januari 2003</td>
+			</tr>
+
+			<tr>
+				<td><b>Jurusan</td>
+				<td>: Teknik Informatika</td>
+			</tr>
+
+			<tr>
+				<td><b>Dosen Wali</td>
+				<td>: Etika Kartikadarma, M.Kom</td>
+			</tr>
+
+		</table>
+
+		<hr width="700">
+
+		<h1 align="center">
+			Daftar Mata Kuliah
+		</h1>
+
+		<table align="center" class="utkmatkul" border="1" width="40%" >
+			<tr>
+				<th>NO.</th>
+				<th>MATA KULIAH</th>
+				<th>SKS</th>
+			</tr>
+
+			<tr>
+				<td>1.</td>
+				<td>Kalkulus</td>
+				<td align="center">4</td>
+			</tr>
+
+			<tr>
+				<td>2.</td>
+				<td>Dasar Pemrograman</td>
+				<td align="center">4</td>
+			</tr>
+
+			<tr>
+				<td>3.</td>
+				<td>Pemrograman Berbasis Web</td>
+				<td align="center">2</td>
+			</tr>
+
+			<tr>
+				<td>4.</td>
+				<td>Dasar-Dasar Komputasi</td>
+				<td align="center">2</td>
+			</tr>
+
+			<tr>
+				<td>5.</td>
+				<td>Pengantar Teknologi Informasi</td>
+				<td align="center">2</td>
+			</tr>
+
+			<tr>
+				<td>6.</td>
+				<td>Organisasi & Arsitektur Komputer</td>
+				<td align="center">3</td>
+			</tr>
+
+			<tr>
+				<td>7.</td>
+				<td>Matematika Diskrit</td>
+				<td align="center">3</td>
+			</tr>
+
+		</table>
+
+        <br>
+
+        <hr width="700">
+
+		<center>
+            <h2>saya suka bermain gta san andreas</h2>
+
+		    <video height="360" width="640" id="tankTerbang" autoplay muted>
+                <source src="misc/get-dunked_360p.mp4" type="video/mp4">
+			    Browser unsupported
+		    </video>
+
+            <br></br>
+
+            <table>
+                <tr>
+                    <td> <button onclick="playVid()" type="button">Play</button> </td>
+                    <td align="center"> <button onclick="unmuteVid()" type="button">Unmute</button> </td>
+                    <td align="right"> <button onclick="loopVid()" type="button">Loop</button> </td>
+                </tr>
+
+                <tr>
+                    <td> <button onclick="pauseVid()" type="button">Pause</button> </td>
+                    <td align="center"> <button onclick="muteVid()" type="button">Mute</button> </td>
+                    <td align="right"> <button onclick="unloopVid()" type="button">Unloop</button> </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <br>
+                        <button onclick="mnculCntrl()" type="button">Show Controls</button>
+                        <button onclick="hilangCntrl()" type="button">Hide Controls</button>
+                    </td>
+                </tr>
+            </table>
+
+            <script>
+                var gta = document.getElementById("tankTerbang");
+
+                function playVid() {
+                    gta.play();
+                }
+                function pauseVid() {
+                    gta.pause();
+                }
+                function hilangCntrl() {
+                    gta.controls = false;
+                    gta.load();
+                }
+                function mnculCntrl() {
+                    gta.controls = true;
+                    gta.load();
+                }
+                function unmuteVid() {
+                    gta.muted = false;
+                }
+                function muteVid() {
+                    gta.muted = true;
+                }
+                function loopVid() {
+                    gta.loop = true;
+                }
+                function unloopVid() {
+                    gta.loop = false;
+                }
+            </script>
+
+        <br>
+
+        <hr width="700">
+
+        <h2>Filipus Wisnumurti, seorang yang bangga menjadi wibu,<br>mengaransemen lagu tradisional Bengawan Solo menjadi<br>notasi balok yang dapat dimainkan paduan Orkestra.<br>Bandung Philamorphic ngebut untuk ambil kesempatan<br>istimewa tersebut menjadi pemain pertama</h2>
+        
+        <audio id="orkesFilipus">
+            <source src="misc/bengawan-solo-orchestra.mp3" type="audio/mpeg">
+            Browser unsupported
+        </audio>
+
+        <table>
+            <tr>
+                <td>                <button onclick="playAudio()" type="button">Putar Audio</button> </td>
+                <td align="center"> <button onclick="unmuteAudio()" type="button">Unmute Audio</button> </td>
+                <td align="right">  <button onclick="loopAudio()" type="button">Loop Audio</button> </td>
+            </tr>
+
+            <tr>
+                <td>                <button onclick="pauseAudio()" type="button">Pause Audio</button> </td>
+                <td align="center"> <button onclick="muteAudio()" type="button">Mute Audio</button> </td>
+                <td align="right"> <button onclick="unloopAudio()" type="button">Unloop Audio</button> </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" align="center">
+                    <br>
+                    <button onclick="showCont()" type="button">Tampilkan Kontrol Audio</button>
+                    <button onclick="hideCont()" type="button">Sembunyikan Kontrol Audio</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" align="center">
+                    <br>
+                    <button onclick="window.location.href='https://youtu.be/V3XuDxCOLR8';">Original Audio Source</button>
+                </td>
+            </tr>
+
+        </table>
+
+        <script>
+            var orkes = document.getElementById("orkesFilipus");
+
+            function playAudio() {
+                orkes.play();
+            }
+            function pauseAudio() {
+                orkes.pause();
+            }
+            function showCont() {
+                orkes.controls = true;
+                orkes.load();
+            }
+            function hideCont() {
+                orkes.controls = false;
+                orkes.load();
+            }
+            function loopAudio() {
+                orkes.loop = true;
+            }
+            function unloopAudio() {
+                orkes.loop = false;
+            }
+            function unmuteAudio() {
+                orkes.muted = false;
+            }
+            function muteAudio() {
+                orkes.muted = true;
+            }
+        </script>
+
+        </center>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <pre align="center">Malazi, 2022</pre>
+    </body>
+</html>
