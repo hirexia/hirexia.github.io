@@ -1,0 +1,48 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>air susu dibalas air teh</title>
+	<style>
+		body {
+			background-color: tan
+		}
+	</style>
+</head>
+<body><center>
+	<h2>Multimedia HTML5</h2>
+	
+	<p>
+		<button onclick="pauseVid()" type="button">Pause</button>
+		<button onclick="playVid()" type="button">Play</button>
+		<button onclick="enableCon()" type="button">CONTROLS ENABLE</button>
+		<button onclick="disableCon()" type="button">the boring one</button>
+	</p>
+	<video id="myVideo">
+		<source src="bunbun.mp4" type="video/mp4">
+		
+	</video>
+	
+	<script>
+	 var vid = document.getElementById("myVideo");
+	 
+function playVid() {
+    vid.play();
+}
+
+function pauseVid() {
+    vid.pause();
+} 	
+function enableCon() {
+	vid.controls = true;
+	vid.load();
+}
+function disableCon() {
+	vid.controls = false;
+	vid.load();
+}
+	
+
+	</script>
+
+</body>
+</html>

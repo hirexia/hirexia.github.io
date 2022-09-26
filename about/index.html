@@ -1,0 +1,169 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Language" content="en_US">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hirexia's Hall - About page</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            $(window).load(function() {
+            $(".indicator").addClass('hidden');
+            $(".spinner").addClass('hidden');
+            });
+        </script>
+        <noscript>
+            <style>
+                .indicator {
+                    display: none;
+                }
+                .spinner {
+                    display: none;
+                }
+
+                @media (min-width: 650px) {
+    .row { width: 100%; display: table; table-layout: fixed; }
+    .col { display: table-cell; vertical-align: top;}
+}
+@media (max-width: 868px) {
+    .content {
+        padding: 0;
+    }
+    .window{
+        margin-top: 0px;
+    }
+    .navigation {
+        width: 25%;
+    }
+}
+@media (max-width: 650px) {
+    .desktop {display:none;}
+    .mobile {display:block;}
+    .mobileheading {display:block;}
+    .footer {
+        margin: 8px 24px 0 24px;
+    }
+    .main {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .navigation {
+        width: unset;
+    }
+    .sidebar {
+        width: unset;
+        padding-top: 0px;
+    }
+    .sidebar.wide {
+        padding-left: 24px;
+    }
+    .content {
+        padding: 1px 0px;
+    }
+    .window {
+        margin-top: 0px;
+        box-shadow: 0 1px 8px rgba(0,0,0,0.25),inset 0 -1px rgba(255,255,255,0.12),inset 0 1px rgba(255,255,255,0.12);
+        border: 0;
+        border-bottom: 1px solid rgba(0,0,0,.50);
+        border-top: 1px solid rgba(0,0,0,.50);
+    }
+}
+            </style>
+        </noscript>
+    </head>
+    <body>
+        <div class="content">
+            
+            <div class="window">
+                <div class="statusbar">
+                    <ul>
+                        <a class="white" href="/"><li class="logo">Hirexia's Hall</li></a>
+                        <li class="active">About</li></a>
+                        <li class="spinner"></li>
+                    </ul>
+                    <ul class="right">
+                        <span id="datetime"/><noscript></noscript>
+                    </ul>
+                </div>
+                <div class="desktop row">
+                    <div class="col navigation">
+                        
+                    </div>
+                    <div class="col heading">
+                        About The Hall
+                    </div>
+                </div>
+                <div class="mobileheading">
+                    About The Hall
+                </div>
+                <div class="row">
+                    <div class="col navigation">
+                        <ul>
+                            <li class="active">About The Hall</li>
+                            <a href="about-hirexia.html"><li class="sub">Hirexia... who?</li></a>
+                        </ul>
+                    </div>
+                    <div class="col main">
+                        <h1>For a fun learning experience</h1>
+                        <p id="copy">Hirexia's Hall started when I was doing my 3rd assignment of Web-Based Programming, mostly due to boredom and I just wanted to do something else. I had just recently found that site called <a href="https://openbooks.neocities.org/" target="_blank">Openbooks</a> over on Neocities. So I started copy-pasting the source code of their front page to my github.io, apparently it was encouraged by Openbook's developer, learning HTML by copying block-per-block into our page. That way, we could learn what each block does, why it works that way... or why it doesn't work THAT way, silly stuff really, but fun nonetheless.</p>
+                        <p id="copy">Site is still work-in-progress these last two days, I've moved the CSS onto a separate file for this page now. So its not messy like the front page anymore, haha (well, mostly). I figured I'd want to use this site for something, but I'm just not sure what would that be... yet.</p>
+                        <p id="copy">Oh well, we'll figure something out. Right? I mean, I kinda always does so... I hope that's the case once again.</p>
+                        <a href="update-log" class="button">This page was updated on 9/26/2022</a>
+                            
+                        <!--
+                        <br/>                        
+                        <h1>Version Information and Credits</h1>
+                        <div class="box">
+                            <h2>OpenBooks 9</h2>
+                            <p>&copy; 2014-2021 The OpenBooks Authors</p>
+                            <p>
+                                <a href="updates.html" class="button">Update History</a>
+                                <a href="credits.html" class="button">Full Credits</a>
+                                <a href="humans.txt">humans.txt</a>
+                            </p>
+                        </div>
+
+                        <h2>Open Source components</h2>
+                        <h3>MIT License</h3>
+                        <div class="codeblock">
+                            <p>Copyright 2014-2021 The OpenBooks Authors</p>
+
+                            <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+                            <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+                            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+                        </div>
+                        <p>
+                            <a href="https://github.com/merewife/openbooks.neocities.org" target="_blank" class="button">View source on GitHub</a>
+                            <a href="/license.txt">license.txt</a>
+                        </p>
+                        <br/>
+                        <h3>Components</h3>
+                        <p>OpenBooks uses all or parts of the following open source projects:</p>
+                        <div class="box">
+                            <p>ungrid - <a href="https://chrisnager.github.io/ungrid/" target="_blank">Chris Nager</a>, free to use</p>
+                            <p>Avalanche CSS - <a href="http://colourgarden.github.io/avalanche/" target="_blank">Colourgarden</a>, MIT license</p>
+                            <p>Metropolis - <a href="https://fontsarena.com/metropolis-by-chris-simpson/" target="_blank">Chris Simpson</a>, Unlicense</p>
+                            <p>Inter - <a href="https://rsms.me/inter/" target="_blank">Rasmus Andersson</a>, SIL Open Font license</p>
+                            <p>Tango Icons - <a href="http://tango.freedesktop.org/Tango_Icon_Library" target="_blank">Free Desktop Project</a>, public domain.</p>
+                        </div>
+                        
+                        <h3>Compatibility</h3>
+                        <div class="box">
+                            <p>OpenBooks is designed to work in any modern browser. A screen resolution of 1024x768 is recommended for desktop or tablet use.</p>
+                        </div>
+                    -->
+                    </div>
+                </div>
+                <br>
+                <p style="color: rgba(255,255,255,0.5); text-align:center;">Maladzi, 2022</p>
+            </div>
+        </div>
+
+        <script>
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+        </script>       
+    </body>
+</html>

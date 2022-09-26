@@ -1,185 +1,14 @@
 <DOCTYPE !html>
 <html>
     <head>
-        <title>Ananta Tuing</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Language" content="en_US">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hirexia's Hall - Homepage</title>
+        <link rel="stylesheet" href="style.css">
+
         <style>
-            
-        body {
-            color: white;
-            background-color: #08394d;
-            /*background: url(/img/10bg2.jpg) no-repeat center center fixed;*/
-            background-size: cover;
-            font-family: Inter,
-            -apple-system, BlinkMacSystemFont, /* safari, chrome mac */
-            "Segoe UI", "Roboto", "Ubuntu", /* windows, android/chromeos, ubuntu */
-            "Cantarell", "Noto Sans", /* gnome, kde */
-            "Lucida Grande", "Tahoma",  /* old mac, old windows */
-            sans-serif; /* fallback */
-            font-size: 15px;
-            line-height: 1.6em;
-            margin: 0;
-            padding: 0;
-            /*padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);*/
-            }
-        
-        .content {
-            /*max-width: 1200px;*/
-            max-width: 868px;
-            border-radius: 16px 16px 0 0;
-            margin: 0px auto 0px auto;
-            padding: 0 3px;
-            }
-
-        .window {
-            background-color: #2b576a;
-            background-image: url(img/bg.jpg);
-            background-repeat: no-repeat;
-            /*background-attachment: fixed;*/
-            background-size: 868px;
-            background-position-x: center;
-            border: 1px solid rgba(0,0,0,0.5);
-            max-width: 100%;
-            /*margin-top: 30px;*/
-            margin-top: 3px;
-            margin-bottom: 16px;
-            margin-left: auto;
-            margin-right: auto;
-            /*padding: 24px;*/
-            border-radius: 20px;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.12), inset -1px 0 rgba(255,255,255,0.25),inset 1px 0 rgba(255,255,255,0.25),inset 0px 1px rgba(255,255,255,0.25),inset 0px -1px rgba(255,255,255,0.25);
-            z-index: 100;
-            }
-
-    /* status bar */
-        .statusbar {
-            background-color: rgba(0,0,0,0.35);
-            color: rgba(255,255,255,.66);
-            min-height: 32px;
-            overflow: hidden;
-            box-shadow: 0 1px 8px rgba(0,0,0,0.25),inset 0 -1px rgba(255,255,255,0.12),inset -1px 0 rgba(255,255,255,0.12),inset 1px 0 rgba(255,255,255,0.12),inset 0px 1px rgba(255,255,255,0.12);
-            border: 1px solid rgba(0,0,0,.50);
-            border-radius: 16px;
-            margin: 7px;
-            font-size: 14px;
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none; /* Safari */
-            -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Old versions of Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-            }
-        .statusbar ul {
-            list-style-type: none;
-            margin: 0 10px;
-            margin-top: 1px;
-            padding: 0px 3px;
-            overflow: hidden;
-            float: left;
-            text-shadow: 0px 1px 2px rgba(0,0,0,0.50), 0px 0px 2px rgba(0,0,0,0.50);
-            }
-
-        .statusbar ul.right {
-            float: right;
-            }
-
-        .statusbar li {
-            float: left;
-            height: 26px;
-            margin: 1px 2px;
-            padding: 0px 6px;
-            padding-top: 2px;
-            display: block;
-            text-align: center;
-            background-color: rgba(0,0,0,0);
-            border-radius: 8px;
-            transition-duration: 100ms;
-            }
-        .statusbar li:hover {
-            background-color: rgba(0,0,0,.25);
-            }
-        .statusbar li.active {
-            background-color: rgba(0,0,0,.25);
-            color: rgba(255,255,255,.75);
-            cursor: not-allowed;
-            text-shadow: none;
-            }
-        .statusbar a {
-    text-decoration: none;
-    /*color: rgba(255,255,255,0.75);*/
-}
-.statusbar a:hover {
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.75), 0px 0px 5px rgba(255,255,255,0.8);
-    color: white;
-}
-.statusbar a:active {
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.75), 0px 0px 5px rgba(0,0,0,0.50)
-}
-.statusbar a.white {
-    color: white;
-}
-.statusbar a.white:hover {
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.75), 0px 0px 5px rgba(255,255,255,0.8);
-}
-.statusbar a.white:active {
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.75), 0px 0px 5px rgba(0,0,0,0.50)
-}
-.statusbar li.logo {
-    font-family: 'Metropolis', 'Inter', /* web font */
-    -apple-system, BlinkMacSystemFont, /* safari, chrome mac */
-    "Segoe UI", "Roboto", "Ubuntu", /* windows, android/chromeos, ubuntu */
-    "Cantarell", "Noto Sans", /* gnome, kde */
-    "Lucida Grande", "Tahoma",  /* old mac, old windows */
-    sans-serif; /* fallback */
-    font-weight: 700;
-    font-size: 16px;
-    padding-top: 2px;
-    height: 26px;
-}
-.statusbar li.indicator {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    margin: 0;
-    padding: 3px 10px;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-    transition-duration: 400ms;
-    text-transform: uppercase;
-    font-size: 11px;
-}
-.statusbar li.spinner {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    margin: 0px 10px;
-    margin-top: 6px;
-    height: 16px;
-    width: 16px;
-    padding: 0px;
-    border-radius: 0px;
-    background-image: url(/img/loader.png);
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-    image-rendering: pixelated;
-    transition-duration: 2000ms;
-}
-.statusbar li.spinner:hover {
-    background-color: rgba(0,0,0,0);
-}
-
 
 ::-moz-selection {
     background: #6bbcf6;
@@ -189,308 +18,6 @@
     background: #6bbcf6;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Metropolis', 'Inter', /* web font */
-    -apple-system, BlinkMacSystemFont, /* safari, chrome mac */
-    "Segoe UI", "Roboto", "Ubuntu", /* windows, android/chromeos, ubuntu */
-    "Cantarell", "Noto Sans", /* gnome, kde */
-    "Lucida Grande", "Tahoma",  /* old mac, old windows */
-    sans-serif; /* fallback */
-    color: whitesmoke;
-}
-h1 {
-    font-size: 30px;
-    font-weight: 400;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1.0;
-}
-h2 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-top: 30px;
-    margin-bottom: 4px;
-    line-height: 1.4;
-}
-h3 {
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 14px;
-    margin-bottom: 4px;
-}
-h4 {
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
-h5 {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 10px;
-    margin-top: 0px;
-    text-transform: lowercase;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.35);
-}
-
-
-p {
-    margin: 0px;
-    margin-top: 2px;
-    margin-bottom: 4px;
-    font-size: 15px;
-    line-height: 1.7em;
-}
-p#copy {
-    text-indent: 20px;
-    font-size: 15px;
-    line-height: 1.7em;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-p#grey {
-    color: rgba(255,255,255,0.5);
-}
-p:active {
-    cursor: text;
-}
-
-            a:link {
-                color: #56d1ac;
-                text-decoration: underline;
-            }
-            a:visited {
-                color: #56d1ac;
-                text-decoration: underline;
-            }
-            a:hover {
-                color: #6ee7e7;
-                text-decoration: underline;
-            }
-            a:active {
-                color: rgb(73, 135, 160);
-                text-decoration: underline;
-            }
-
-hr {
-    border: 0;
-    border-bottom: 1px dashed #2b3c46;
-    background: #162630;
-    margin-bottom: 40px;
-}
-
-ul {
-    padding-inline-start: 16px;
-    margin: 0;
-}
-li {
-    margin: 4px 0;
-}
-
-.titles {
-    margin-top: 10px;
-}
-.titleleft {
-    font-size: 48px;
-    font-weight: bold;
-    padding: 30px 40px;
-    text-shadow: 0px 1px 4px rgba(0,0,0,0.5);
-    font-family: 'Metropolis', 'Inter', /* web font */
-    -apple-system, BlinkMacSystemFont, /* safari, chrome mac */
-    "Segoe UI", "Roboto", "Ubuntu", /* windows, android/chromeos, ubuntu */
-    "Cantarell", "Noto Sans", /* gnome, kde */
-    "Lucida Grande", "Tahoma",  /* old mac, old windows */
-    sans-serif;
-}
-.titleright {
-    font-size: 22px;
-    padding: 30px 40px;
-    text-align: right;
-    font-weight: 400;
-    text-shadow: 0px 1px 4px rgba(0,0,0,0.5);
-    font-family: 'Metropolis', 'Inter', /* web font */
-    -apple-system, BlinkMacSystemFont, /* safari, chrome mac */
-    "Segoe UI", "Roboto", "Ubuntu", /* windows, android/chromeos, ubuntu */
-    "Cantarell", "Noto Sans", /* gnome, kde */
-    "Lucida Grande", "Tahoma",  /* old mac, old windows */
-    sans-serif; /* fallback */
-}
-.mobile {
-    display: none;
-}
-
-
-.tilewrapper {
-    text-align: center;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-
-.tile {
-    display: inline-block;
-    background-color: rgba(255,255,255,0);
-    border: 1px solid rgba(255,255,255,0);
-    transition-duration: 250ms;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0);
-    border-radius: 12px;
-    text-align: center;
-    margin: 2%;
-    width: 15%;
-    min-width: 100px;
-}
-.tile:hover {
-    background-color: rgba(255,255,255,0.25);
-    border: 1px solid rgba(255,255,255,0.25);
-    color: white;
-    box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
-    transform: translate(0, -1px);
-    transition-duration: 300ms;
-}
-.tile:active {
-    background-color: rgba(255,255,255,0.10);
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.50);
-    transform: translate(0, 1px);
-    transition-duration: 100ms;
-}
-.tile img {
-    height: 64px;
-    width: 64px;
-    margin: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-}
-
-.tile.small {
-    width: 25%;
-    padding-left: 6px;
-    padding-right: 6px;
-}
-
-.tile.small img {
-    height: 48px;
-    width: 48px;
-}
-
-.tile p {
-    margin: 0;
-    margin-bottom: 6px;
-    font-size: 12px;
-}
-.tilewrapper a:link {
-    color: rgba(255,255,255,.8);
-}
-.tilewrapper a:visited {
-    color: rgba(255,255,255,.8);
-}
-
-.main {
-    padding: 20px 40px 20px 40px;
-}
-.main > :first-child {
-    margin-top: 10px;
-}
-
-.col.main {
-    background-color: rgba(0,0,0,0.10);
-    border-radius: 18px;
-    border-top: 1px solid rgba(255,255,255,0.25);
-    border-left: 1px solid rgba(255,255,255,0.25);
-    box-shadow: -1px -1px 4px rgba(0,0,0,0.10);
-}
-.col.main.bottom {
-    border-bottom: 1px solid rgba(255,255,255,0.25);
-}
-
-.box {
-    padding: 12px 22px;
-    border: 1px solid rgba(255,255,255,0.25); 
-    border-radius: 0;
-    position: relative;
-    background-color: rgba(0,0,0,0.10); 
-    box-shadow: 0px 0px 4px rgba(0,0,0,0.10);
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-.box > :first-child {
-    margin-top: 0;
-}
-.box > :last-child {
-    margin-bottom: 0;
-}
-
-.heading {
-    color: white;
-    font-family: 'Metropolis', 'Inter', /* web font */
-    -apple-system, BlinkMacSystemFont, /* safari, chrome mac */
-    "Segoe UI", "Roboto", "Ubuntu", /* windows, android/chromeos, ubuntu */
-    "Cantarell", "Noto Sans", /* gnome, kde */
-    "Lucida Grande", "Tahoma",  /* old mac, old windows */
-    sans-serif; /* fallback */
-    font-weight: 700;
-    font-size: 36px;
-    padding:  18px 40px 16px 40px;
-    line-height: 1.0;
-    margin: 0;
-    text-shadow: 0px 1px 4px rgba(0,0,0,0.5);
-}
-.heading.centered {
-    text-align: center;
-    font-size: 40px;
-    padding: 18px 10px 16px 10px;
-    margin-bottom: 6px;
-}
-.heading.small {
-    padding: 2px 2px 16px 4px;
-    text-transform: uppercase;
-    text-shadow: unset;
-    color: rgba(255,255,255,0.8);
-    font-size: 20px;
-}
-.mobileheading {
-    color: white;
-    font-family: 'Metropolis', 'Inter', /* web font */
-    -apple-system, BlinkMacSystemFont, /* safari, chrome mac */
-    "Segoe UI", "Roboto", "Ubuntu", /* windows, android/chromeos, ubuntu */
-    "Cantarell", "Noto Sans", /* gnome, kde */
-    "Lucida Grande", "Tahoma",  /* old mac, old windows */
-    sans-serif; /* fallback */
-    font-weight: 700;
-    font-size: 36px;
-    padding:  18px 10px 0px 10px;
-    text-align: center;
-    line-height: 1.0;
-    margin: 0;
-    display:none;
-    text-shadow: 0px 1px 4px rgba(0,0,0,0.5);
-}
-
-/* TOP HITS section */
-dd {
-    margin-bottom: 10px;
-}
-/* button example on home page */
-#code {
-    display: inline-block;
-    color: white;
-    font-family: monospace;
-    font-size: 12px;
-    background-color: rgba(0,0,0,0.15);
-    padding: 4px;
-    padding-left: 8px;
-    border-radius: 4px;
-    margin-right: 20px;
-    cursor: text;
-    overflow: hidden;
-    max-width: 100%;
-}
 
 @media (min-width: 650px) {
     .row { width: 100%; display: table; table-layout: fixed; }
@@ -539,170 +66,6 @@ dd {
         border-top: 1px solid rgba(0,0,0,.50);
     }
 }
-
-/* sidebar navigation */
-.sidebar {
-    padding: 24px 24px 24px 24px;
-    width: 220px;
-}
-.sidebar.wide {
-    width: unset;
-    padding-left: 48px;
-}
-.navigation {
-    padding: 24px 24px 24px 24px;
-    width: 220px;
-}
-.sidebar .navigation {
-    padding: 0px;
-    width: 100%;
-}
-.navigation ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    font-family: 'Metropolis', 'Inter', /* web font */
-    -apple-system, BlinkMacSystemFont, /* safari, chrome mac */
-    "Segoe UI", "Roboto", "Ubuntu", /* windows, android/chromeos, ubuntu */
-    "Cantarell", "Noto Sans", /* gnome, kde */
-    "Lucida Grande", "Tahoma",  /* old mac, old windows */
-    sans-serif; /* fallback */
-    font-size: 20px;
-}
-.navigation ul.mini {
-    font-size: 16px;
-}
-.navigation li {
-    margin: 0px 0 6px 0;
-    padding: 8px 18px;
-    border-radius: 8px;
-    border: 1px solid rgba(0,0,0,0);
-    transition-duration: 100ms;
-}
-.mini li {
-    padding: 2px 18px;
-}
-.navigation li:hover {
-    color: white;
-    transition-duration: 50ms;
-
-}
-.navigation li:active {
-    color: rgba(255,255,255,.6);
-}
-.navigation li.active {
-    color: rgba(255,255,255,.66);
-    background-color: rgba(0,0,0,0.10);
-    border: 1px solid rgba(255,255,255,0.25);
-    cursor: not-allowed;
-}
-.navigation a:link {
-    color: rgba(221, 221, 221, 0.75);
-    text-decoration: none;
-    text-shadow: 0px 0px 5px rgba(221, 221, 221, 0.6),0px 0px 0px rgba(221, 221, 221, 0.6);
-
-}
-.navigation a:visited {
-    color: rgba(255,255,255,0.5);
-}
-.navigation a:hover {
-    color: white;
-    text-shadow: 0px 0px 5px rgba(255,255,255,0.6),0px 0px 25px rgba(255,255,255,0.6);
-
-}
-.navigation li a:active {
-    color: rgba(255,255,255,.6)
-}
-.navigation li.sub {
-    margin-left: 16px;
-    font-size: 18px;
-    padding: 4px 18px;
-}
-
-.footer {
-    text-align: center;
-    color: white;
-    background-color: rgba(0,0,0,0.25);
-    font-size: 14px;
-    padding: 6px 10px;
-    margin-top: 8px;
-    display: inline-block;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,.25);
-}
-.footercontainer {
-    text-align: center;
-    /*position: fixed;*/
-    width: 100%;
-    margin: 0 auto 20px;
-    bottom: 0;
-    z-index: -1;
-}
-
-button {
-    font-family: var(--main-font-family);
-}
-
-button:focus, input:focus { outline: none; }
-.button {
-    display: inline-block;
-    background-color: rgba(255,255,255,0.10);
-    color: white;
-    text-shadow: 0px 0px 2px rgba(255,255,255,0.25), 0px 2px 4px rgba(0,0,0,.50);
-    font-size: 1em;
-    margin-top: 6px;
-    margin-right: 6px;
-    margin-left: 0;
-    padding-top: .5em;
-    padding-bottom: .6em;
-    padding-left: .6em;
-    padding-right: .6em;
-    border: 1px solid rgba(255,255,255,.25);
-    border-radius: 6px;
-    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
-    transition-duration: 0.2s;
-    line-height: 1em;
-    cursor: pointer;
-    }
-
-    
-a.button{
-    color: white;
-    text-decoration: none;
-    margin-left: 0;
-}
-.button:hover{
-    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.2);
-    transform: translateY(-1px);
-}
-.button:active{
-    background-color: rgba(0,0,0,0.25);
-    border-radius: 3px;
-    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.25);
-    transform: translateY(.1em);
-
-}
-.button.primary {
-    background-color: #49c46880;
-}
-.button.primary:active {
-    background-color: #4A9C5E80;
-}
-.button.disabled, button.disabled:hover, button.disabled:active {
-    cursor: not-allowed;
-    background-color: #DDD;
-    color: #BBB;
-    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0);
-    border-radius: .6em;
-    transform: translateY(0em);
-}
-.button.flat, button.flat:hover, button.disabled:active {
-    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0);
-    transform: translateY(0em);
-}
-
-
         </style>
 
         <script>
@@ -712,8 +75,6 @@ a.button{
             });                   
 
         </script>
-
-
 
     </head>
 
@@ -727,9 +88,9 @@ a.button{
                         <li class="spinner"></li>
                     </ul>
                     <ul class="right">
-                        <script type="text/javascript" src="/js/96statusbar.js"></script>
+                        <script>document.write ('<a class="white" href="https://openbooks.neocities.org"><li>Template by Openbooks</li></a>');</script>
                         <noscript>
-                            <a class="white" href="updates.html"><li>Update History</li></a>
+                            <a class="white" href="https://openbooks.neocities.org"><li>Source code</li></a>
                         </noscript>
                     </ul>
                 </div>
@@ -747,9 +108,9 @@ a.button{
                 <div class="statusbar desktop">
                     <ul>
                         <li class="active">Home</li>
-                        <!--<a href="projects.html"><li>Projects</li></a>-->
-                        <a href="jadwal.html"><li>Jadwal</li></a>
-                        <a href="about.html"><li>About</li></a>
+                        <!--<a href="projects.html"><li>Projects</li></a>
+                        <a href="jadwal.html"><li>Jadwal</li></a>-->
+                        <a href="about"><li>About</li></a>
                         <li class="spinner"></li>
                     </ul>
                     <ul class="right">
@@ -777,26 +138,20 @@ a.button{
                 
                 <div class="row">
                     <div class="col sidebar">
-                        <div class="navigation">
-
-                            
-                            
+                        <div class="navigation">                         
                             <ul>
-                                <a href="https://owncloud.dinus.ac.id/s/O7My8plr23tMC7b/"><li>OwnCloud</li></a>
-                                <a href="webring.html"><li>WebRing</li></a>
-                                <a href="discord.html"><li>Discord</li></a>
-                                <a href="homes/"><li>Microsites</li></a>
-                                <a href="timewarp/"><li>TimeWarp</li></a>
-                                <a href="news.html"><li>News</li></a>
-                                <a href="updates.html"><li>Updates</li></a>
-                                <a href="about.html"><li>About</li></a>
+                                <a href="https://owncloud.dinus.ac.id/s/O7My8plr23tMC7b/authenticate"><li>OwnCloud</li></a>
+                                <a href="http://staggeringbeauty.com"><li>Seizure Inducer</li></a>
+                                <a href="https://github.com/hirexia"><li>Over Me Github</li></a>
+                                <a href="https://guya.moe/read/manga/Oshi-no-Ko/"><li>Aka's Manga</li></a>
+                                <a href="https://mangadex.org/title/76ac6b53-df49-4ace-85a2-b27970830ef2?page=14"><li>Curry's Manhwa</li></a>
                             </ul>
                         </div>
                     </div>
                         <div class="col main bottom">
                         <h3>My Music Taste Suck...</h3>
                         <br>
-                        <div class="centered">
+                        <div>
                             <center><iframe class="box" width="420" height="270" src="https://www.youtube-nocookie.com/embed/V3XuDxCOLR8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
                         
                             <p>...as in, I like so many different genres of songs that they all kinda balanced each other out. Nothing too outstanding, nothing too unique because they all just... are.</p>
