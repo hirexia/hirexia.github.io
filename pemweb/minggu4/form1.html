@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            latian bikin formulir
+        </title>
+        <style>
+           body {
+            background-color:thistle ;
+            font-family: Tahoma;
+           }
+
+           h2 {
+				font-family:arial;
+				color:midnightblue;
+                font-size:250%;
+           }
+        </style>
+
+    </head>
+    <body>
+        <center>
+        <h2>Element Form - HTML5</h2>
+
+            <form name="fmhs" method="post" action="proses.php">
+
+            <table   border="0">
+                <tr>
+                    <td>NIM</td>
+                    <td><input type="number" name="fnim" required><br></td>
+                </tr>
+
+                <tr>
+                    <td>Nama</td>
+                    <td><input type="text" name="fnam" required></td>
+                </tr>
+
+                <tr>
+                    <td>Tgl Lahir</td>
+                    <td><input type="date" name="ftgl" required></td>
+                </tr>
+
+                <tr>
+                    <td>Program Studi</td>
+                    <td>
+                        <select name="fprod" required>
+                        <option value="">Pilih</option>
+                        <option value="11">S1 - Teknik Informatika</option>
+                        <option value="12">S1 - Sistem Informasi</option>
+                        <option value="22">D4 - Teknik Informatika</option>
+                    </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Bidang Minat</td>
+                    <td rowspan="2">
+                        <input type="checkbox" name="fbid2" value="2"><label>Mobile Programming</label><br>
+                        <input type="checkbox" name="fbid1" value="1"><label>Web Programming</label>
+                        <input type="checkbox" name="fbid3" value="3"><label>Data Science</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td><!--kosongan biar ada ruang antara 'bidang minat' sama 'berkas'-->
+
+                </tr>
+
+                <tr>
+                    <td>Berkas CV</td>
+                    <td><input type="file" name="fberkas" required><br></td>
+                </tr>
+
+                <tr>
+                    <td align="right"> <input type="submit" name="fsubmit"> </td>
+                    <td> <input type="reset" name="freset"> </td>
+                </tr>
+            </table>
+
+            </form>
+
+
+        </center>
+    </body>
+
+
+
+</html>
