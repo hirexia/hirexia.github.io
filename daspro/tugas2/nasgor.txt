@@ -1,0 +1,71 @@
+judul
+    	Cara membuat nasi goreng telur
+  	Risky Luthfan Maladzi
+	9 September 2022
+	
+
+kamus
+    	nasi	  
+    	kuning telur  
+    	bubuk nori	  
+    	daun bawang	  
+    	kaldu jamur	  
+    	garam	  
+    	saus tiram	  
+    	mentega	 
+
+deskripsi
+
+	Campurkan nasi dengan bubuk nori, dan telur
+
+	Aduk hingga merata
+
+	if (nasi, bubuk nori, dan telur sudah di aduk merata)
+		then
+		{
+			sisihkan
+		}
+		else
+		{
+			aduk hingga merata
+		}
+
+	Panaskan wajan dengan api sedang
+
+	Masukkan mentega dan daun bawang ke dalam wajan
+
+	if (mentega dan daun bawang sudah di dalam wajan)
+		then
+		{
+			masak hingga harum
+		}
+		else
+		{
+			masukkan mentega dan daun bawang ke dalam wajan
+		}
+
+	Masukkan nasi ke dalam wajan
+
+	if (nasi sudah di dalam wajan)
+		then
+		{
+			aduk hingga merata
+		}
+		else
+		{
+			masukkan nasi ke dalam wajan
+		}
+
+	Tambahkan garam, kaldu jamur, saus tiram
+
+	if (sudah di aduk)
+		then
+		{
+			angkat dan sajikan
+		}
+		else
+		{
+			aduk hingga merata
+		}
+	
+	Tambahkan lauk seperlunya dan sesukanya

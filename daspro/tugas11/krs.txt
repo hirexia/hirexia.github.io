@@ -1,0 +1,689 @@
+//jdul      : krs khs
+//oleh      : Risky Luthfan Maladzi (A11.2022.14734)
+//tgl       : 23:34 - 16 okto 22
+//
+
+#include <iostream>
+#include <string>
+#include <conio.h>
+#include <algorithm>
+using namespace std;
+
+//kamus
+
+    //konfir adalah variable input konfirmasi
+    //kronfim adalah section untuk goto menuju bagian tertentu program ini
+
+    string konfirstar;      //konfirmasi mulai
+
+    string nama;            //nama lengkap
+    string kode;            //A11, A13, A17, A21, kelas prodi
+    string kelp;            //kelompok kelas
+    string tahun;           //angkatan tahun ajaran
+    string nim;             //5 angka terakhir NIM
+    string jursan;          //jurusan diperoleh dari kode
+
+    string konfirb1;        //konfir biodata sdh benar
+
+    string konfirb2;        //konfir matkul sudah benar
+
+
+    int jumkul;             //jumlah mata kuliah
+
+    string matkul[15];      //nama matakuliah
+    int kulmat[15];         //sks
+    int pilkul = 0;             //variabel untuk memasukkan matkul dan kulmat
+
+    int ralatmatkul;        //variable untuk pilih nama matkul yang ingin diganti
+
+    string konfirgnti;      //konfirmasi ganti nama matkul terpilih di fase2
+
+    string placeholder;          //placeholder untuk matkul yang hendak diganti
+                                    //juga digunakan untuk wadah y/n konfirmasi fase3
+
+    string konfirUlg;       //konfirmasi ganti jumlah matkul dan ulang inputan
+
+
+    string statusMK[15];    //Teori Praktikum
+    int nMid[15];
+    int nUas[15];           //nilai
+    int nTgs[15];
+
+    float pMid[15];         //presentase
+    float pUas[15];
+    float pTgs[15];
+
+    float totM[15];
+    float totU[15];         //total
+    float totT[15];
+
+    float totla[15];
+
+    int pchd;               //placeholder angka untuk menotalkan
+
+//despif8rpds
+
+            void tdkValid()
+            {
+                cout << "    ===================================================" << endl;
+                cout << "      Input anda tidak valid, silakan coba lagi." << endl;
+                cout << "          Y = Ya                N = Tidak" << endl;
+            }
+
+
+
+main()
+{
+    cout << endl;
+    cout << "    ===================================================" << endl;
+    cout << "       Anda baru saja menyalakan program KRS-KHS" << endl;
+    cout << "       Apakah anda ingin melanjutkan? (Y/N)" << endl;
+
+    kronfimstar:
+    cout << "       >";
+    cin >> konfirstar;
+
+    if(konfirstar=="Y"||konfirstar=="y")
+    {
+        goto mulai;
+    }
+    //------------------------
+    else    if(konfirstar=="n"||konfirstar=="N")
+            {
+                cout << "    ===================================================" << endl;
+                cout << "            Program KRS-KHS telah dihentikan," << endl;
+                cout << "        silakan tekan tombol apa saja untuk keluar." << endl;
+                cout << "    ===================================================" << endl;
+                return 0;
+            }
+            else
+            {
+                cout << "    ===================================================" << endl;
+                cout << "       Input anda tidak valid, silakan coba lagi." << endl;
+                cout << "           Y = Ya                N = Tidak" << endl;
+                goto kronfimstar;
+            }
+    mulai:
+    cout << "    ===================================================" << endl;
+    cout << endl;
+    cout << "       888888ba" << endl;
+    cout << "       88    `8b" << endl;
+    cout << "      a88aaaa8P' 88d888b. .d8888b. .d8888b. 88d888b. .d8888b. 88d8b.d8b." << endl;
+    cout << "       88        88'  `88 88'  `88 88'  `88 88'  `88 88'  `88 88'`88'`88" << endl;
+    cout << "       88        88       88.  .88 88.  .88 88       88.  .88 88  88  88" << endl;
+    cout << "       dP        dP       `88888P' `8888P88 dP       `88888P8 dP  dP  dP" << endl;
+    cout << "                                        .88" << endl;
+    cout << "                                    d8888P" << endl;
+    cout << endl;
+    cout << "       dP     dP  888888ba  .d88888b     dP     dP dP     dP  .d88888b" << endl;
+    cout << "       88   .d8  88     `8b 88.          88   .d8  88     88  88.      " << endl;
+    cout << "       88aaa8P'  a88aaaa8P' `Y88888b.    88aaa8P'  88aaaaa88a `Y88888b." << endl;
+    cout << "       88   `8b.  88   `8b.       `8b    88   `8b. 88     88        `8b" << endl;
+    cout << "       88     88  88     88 d8'   .8P    88     88 88     88  d8'   .8P" << endl;
+    cout << "       dP     dP  dP     dP  Y88888P     dP     dP dP     dP   Y88888P" << endl;
+    cout << endl;
+    cout << "    ===================================================" << endl;
+    cout << "                    Banner made with" << endl;
+    cout << "           textkool.com/en/ascii-art-generator" << endl;
+    fase1:
+    cout << "    ===================================================" << endl;
+    cout << endl;
+    cout << "       Masukkan nama anda." << endl;
+    cout << "       >";
+    cin.ignore();
+    getline (cin, nama);
+
+    cout << endl;
+    cout << "       Masukkan kode jurusan anda." << endl;
+    cout << "       >";
+    cin >> kode;
+
+    cout << endl;
+    cout << "       Masukkan 4 digit terakhir kelompok kelas anda." << endl;
+    cout << "       >";
+    cin >> kelp;
+
+    cout << endl;
+    cout << "       Masukkan tahun anda mulai belajar disini." << endl;
+    cout << "       >";
+    cin >> tahun;
+
+    cout << endl;
+    cout << "       Masukkan 5 digit terakhir NIM anda." << endl;
+    cout << "       >";
+    cin >> nim;
+
+    //jika kode jurusan null, program akan dimulai dari sini lagi
+
+    kronfimkode:
+
+    if ((kode=="A11") or (kode=="a11"))
+    {
+        jursan = "Teknik Informatika (S1)";
+    }
+    else    if ((kode=="A12") or (kode=="a12"))
+            {
+                jursan = "Sistem Informasi (S1)";
+            }
+            else    if ((kode=="A21") or (kode=="a21"))
+                    {
+                        jursan = "Manajemen Informatika (D3)";
+                    }
+                    else    if ((kode=="A14") or (kode=="a14"))
+                            {
+                               jursan = "Desain Komunikasi Visual (S1)";
+                            }
+                            else    if ((kode=="A15") or (kode=="a15"))
+                                    {
+                                        jursan = "Ilmu Komunikasi (S1)";
+                                    }
+                                    else    if ((kode=="A16") or (kode=="a16"))
+                                            {
+                                                jursan = "Film dan Televisi (S.Tr)";
+                                            }
+                                            else    if ((kode=="A17") or (kode=="a17"))
+                                                    {
+                                                        jursan = "Animasi (S.Tr)";
+                                                    }
+    else if ((kode=="B11") or (kode=="b11"))
+            {
+                jursan = "Manajemen (S1)";
+            }
+            else if ((kode=="B12") or (kode=="b12"))
+                 {
+                     jursan = "Akuntansi S1";
+                 }
+    else if ((kode=="C11") or (kode=="c11"))
+            {
+                jursan = "Sastra Inggris (S1)";
+            }
+            else if ((kode=="C12") or (kode=="c12"))
+                 {
+                     jursan = "Sastra Jepang (S1)";
+                 }
+                 else if ((kode=="C13") or (kode=="c13"))
+                      {
+                          jursan = "Manajemen Perhotelan (S.Tr)";
+                      }
+                                                    else
+                                                    {
+                                                        jursan = "null";
+                                                    }
+
+
+
+
+
+
+            /*tahap pendataan berakhir disini
+
+=======================================================================================================================================*/
+
+    transform(kode.begin(), kode.end(), kode.begin(), ::toupper);  //fungsinya mengkapital semua huruf dalam string 'kode'
+
+    cout << endl;
+    cout << "    ===================================================" << endl;
+    cout << endl;
+    cout << "       Berikut hasil data diri yang anda inputkan." << endl;
+    cout << endl;
+    cout << "       Nama     : " << nama << endl;
+    cout << "       NIM      : " << kode << "." << tahun << "." << nim << endl;
+    cout << "       Kelompok : " << kode << "." << kelp << endl;
+    cout << "       Jurusan  : " << jursan << endl;
+
+    cout << endl;
+    cout << "       Apakah data ini sudah benar? (Y/N)" << endl;
+    cout << "       Menjawab 'tidak' akan mengulangi proses pendataan" << endl;
+    kronfimb1:
+    cout << "       >";
+    cin >> konfirb1;
+
+    if(konfirb1=="Y"||konfirb1=="y")
+    {
+        cout << endl;
+    }
+    //------------------------
+    else    if(konfirb1=="n"||konfirb1=="N")
+            {
+                cout << endl;
+                cout << "    ===================================================" << endl;
+                cout << "            Proses penginputan data diulang..." << endl;
+                goto fase1;
+            }
+            else
+            {
+                cout << endl;
+                cout << "    ===================================================" << endl;
+                cout << "      Input anda tidak valid, silakan coba lagi." << endl;
+                cout << "          Y = Ya                N = Tidak" << endl;
+                goto kronfimb1;
+            }
+
+    if (jursan == "null")
+    {
+        cout << endl;
+        cout << "    ===================================================" << endl;
+        cout << endl;
+        cout << "       Kode Jurusan yang ada input-kan tidak valid!" << endl;
+        cout << endl;
+        cout << "       Daftar lengkap kode jurusan yang valid dapat" << endl;
+        cout << "       anda cek di:" << endl;
+        cout << "             pmb.dinus.ac.id/biaya-pendidikan" << endl;
+        cout << endl;
+        cout << "       Mohon masukkan kode jurusan yang valid." << endl;
+        cout << "       >";
+        cin >> kode;
+        goto kronfimkode;
+    }
+
+    //else, tidak ada apa-apa, langsung menjalankan fase2.
+    //value 'jursan' diperoleh dari kode jurusan, jadi tidak mungkin ada mismatch.
+
+
+    cout << "    ===================================================" << endl;
+    cout << endl;
+    cout << "       * Selamat datang," << endl;
+    cout << "       "<< nama << "!" << endl;
+
+    fase2:
+    cout << endl;
+    cout << "       Ada berapa mata kuliah yang anda pelajari" << endl;
+    cout << "       dalam Program Studi " << jursan << "?" << endl;
+    ulangjumkul:
+    cout << "       >";
+    cin >> jumkul;
+    cin.ignore();
+
+    if ((jumkul > 12)||(jumkul < 0))
+    {
+        cout << endl;
+        cout << "       MOHON DIINGAT-INGAT LAGI JUMLAHNYA!" << endl;
+        goto ulangjumkul;
+    }
+
+/*----------------------------------------------------------------------------------
+
+                    LOOP INPUT MATKUL DISINI
+
+----------------------------------------------------------------------------------*/
+
+
+    while (pilkul <= jumkul-1)
+    {
+        cout << endl;
+        cout << "       Masukkan nama mata kuliah ke-" << (pilkul+1) << endl;
+        cout << "       >";
+        getline (cin, matkul[pilkul]);
+        pilkul++;
+    }
+
+/*----------------------------------------------------------------------------------
+
+                                            SAMPAI SINI
+
+----------------------------------------------------------------------------------*/
+
+    pilkul = 0;
+    cout << endl;
+    cout << "    ===================================================" << endl;
+    cout << endl;
+    cout << "      Apakah anda yakin nama-nama mata kuliah yang" << endl;
+    cout << "      telah di-input-kan sudah benar?" << endl;
+
+    opsiMatkul:
+    cout << endl;
+    cout << "      Berikut opsi yang dapat anda lakukan :" << endl;
+    cout << "         1. Lanjut meng-input SKS" << endl;
+    cout << "         2. Ada typo pada salah satu mata kuliah" << endl;
+    cout << "            yang saya ketikkan" << endl;
+    cout << "         3. Jumlah Mata Kuliah saya SALAH" << endl;
+    cout << "         4. Saya ingin melihat hasil input saya" << endl;
+    cout << endl;
+    cout << "      >";
+    cin >> konfirb2;
+
+    ulgKronfimb2:
+    if (konfirb2 == "1")
+    {
+        goto fase3;
+    }
+    else if (konfirb2 == "2")
+    {
+        cout << endl;
+        cout << "    ===============[GANTI NAMA MATKUL]=================" << endl;
+        cout << endl;
+        cout << "      Nama mata kuliah ke-berapa yang hendak" << endl;
+        cout << "      anda perbaiki? (1-" << jumkul << ")" << endl;
+        cout << "      >";
+        cin >> ralatmatkul;
+
+        if ((0 > ralatmatkul)||(ralatmatkul > jumkul))
+        {
+            cout << endl;
+            cout << "    ===================================================" << endl;
+            cout << endl;
+            cout << "      Input tidak valid! Silakan cek kembali" << endl;
+            cout << "      jumlah mata kuliah yang anda masukkan." << endl;
+            goto ulgKronfimb2;
+        }
+
+        ralatmatkul = ralatmatkul - 1;
+        cout << endl;
+        cout << "      Berikut nama matkul yang hendak anda ganti," << endl;
+        cout << endl;
+        cout << "        >> " << matkul[ralatmatkul] << endl;
+        cout << endl;
+        cout << "      Masukkan nama baru pada matkul ini." << endl;
+        cout << "      >";
+        cin.ignore();
+        getline (cin, placeholder);
+
+        cout << endl;
+        cout << "      Apakah anda yakin hendak mengganti nama matkul ini? (Y/N)" << endl;
+        cout << "         Sebelum : " << matkul[ralatmatkul] << endl;
+        cout << "         Sesudah : " << placeholder << endl;
+        cout << "      >";
+        cin >> konfirgnti;
+
+        if ((konfirgnti == "y")||(konfirgnti == "Y"))
+        {
+            matkul[ralatmatkul] = placeholder;
+            cout << endl;
+            cout << "      Berhasil mengganti nama matkul ke-" << ralatmatkul+1 << endl;
+        }
+        else
+        {
+            cout << "      Membatalkan..." << endl;
+        }
+
+        cout << "    ===============[GANTI NAMA MATKUL]=================" << endl;
+        goto opsiMatkul;
+
+    }
+    else if (konfirb2 == "3")
+    {
+        cout << endl;
+        cout << "    =====================[RESET]=======================" << endl;
+        cout << endl;
+        cout << "      Apakah anda yakin ingin mengganti jumlah" << endl;
+        cout << "      mata kuliah anda? (Y/N)" << endl;
+        cout << "      >";
+        cin >> konfirUlg;
+
+        if(konfirUlg=="Y"||konfirUlg=="y")
+        {
+            cout << endl;
+            cout << "      Ini berarti anda harus meng-input ulang" << endl;
+            cout << "      seluruh mata kuliah anda DARI AWAL!" << endl;
+            cout << "      APAKAH ANDA BENAR-BENAR YAKIN? (Y/N)" << endl;
+            kronfimUlg:
+            cout << "      >";
+            cin >> konfirUlg;
+
+            if(konfirUlg=="Y"||konfirUlg=="y")
+            {
+                goto fase2;
+            }
+            else
+            {
+                cout << "      Membatalkan..." << endl;
+            }
+        }
+        else
+        {
+            cout << "      Membatalkan..." << endl;
+        }
+
+        cout << "    ===================================================" << endl;
+        goto opsiMatkul;
+    }
+    else if (konfirb2 == "4")
+    {
+        cout << endl;
+        cout << "    [==================HASIL INPUT====================]" << endl;
+        cout << endl;
+        cout << "      Berikut Mata Kuliah yang telah anda inputkan:" << endl;
+        cout << endl;
+        while (pilkul <= jumkul-1)
+        {
+            cout << "         Mata kuliah ke-" << (pilkul+1) << " : " << matkul[pilkul] << endl;
+            pilkul++;
+        }
+        pilkul = 0;
+        cout << endl;
+        cout << "    [==================HASIL INPUT====================]" << endl;
+        goto opsiMatkul;
+    }
+    else
+    {
+        cout << endl;
+        cout << "      --Input tidak valid! Hanya angka" << endl;
+        cout << "        antara 1 hingga 4." << endl;
+        cout << "    ===================================================" << endl;
+        goto opsiMatkul;
+    }
+
+    fase3:
+    cout << endl;
+    cout << "    [===================INPUT SKS=====================]" << endl;
+    cout << endl;
+    cout << "      *SKS merupakan singkatan dari" << endl;
+    cout << "       Satuan Kredit Semester." << endl;
+    cout << endl;
+    cout << "      Masukkan jumlah SKS tiap Mata Kuliah yang sudah" << endl;
+    cout << "      anda input-kan:" << endl;
+    cout << endl;
+
+    while (pilkul <= jumkul-1)
+    {
+        cout << "       " << matkul[pilkul] << " : ";
+        cin >> kulmat[pilkul];
+        pilkul++;
+    }
+
+    pilkul = 0;
+    konfirSKS:
+    cout << endl;
+    cout << "      Apakah jumlah SKS setiap mata kuliah yang" << endl;
+    cout << "      tertera diatas sudah benar? (Y/N)" << endl;
+    cout << "      (jika tidak, maka proses input SKS" << endl;
+    cout << "      akan DIULANG)" << endl;
+    cout << "      >";
+    cin >> placeholder;
+
+    if ((placeholder=="y")||(placeholder=="Y"))
+    {
+        cout << endl;
+    }
+    else
+    if ((placeholder=="n")||(placeholder=="N"))
+    {
+        goto fase3;
+    }
+    else
+    {
+        tdkValid();
+        goto konfirSKS;
+    }
+
+    fase4:
+    cout << "    [===============KARTU RENCANA STUDI===============]" << endl;
+    cout << "      Nama  : " << nama << endl;
+    cout << "      NIM   : " << kode << "." << tahun << "." << nim << endl;
+    cout << "      Kelp  : " << kode << "." << kelp << endl;
+    cout << "      Prodi : " << jursan << endl;
+    cout << "     -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -" << endl;
+    while (pilkul <= jumkul-1)
+    {
+        cout << "      " << matkul[pilkul] << " (" << kulmat[pilkul] << ")" << endl;
+        pilkul++;
+    }
+    cout << endl;
+    cout << "        *format : Mata Kuliah(Jumlah SKS)" << endl;
+    cout << "    [===============KARTU RENCANA STUDI===============]" << endl;
+    pilkul = 0;
+
+    fase5:
+    cout << endl;
+    cout << "      Apakah anda hendak melanjutkan untuk membuat" << endl;
+    cout << "      Kartu Hasil Studi menggunakan data diatas? (Y/N)" << endl;
+    cout << "      (menjawab 'tidak' akan mengakhiri program ini)" << endl;
+    cout << "      >";
+    cin.ignore();
+    getline (cin, konfirstar);
+
+    if(konfirstar=="Y"||konfirstar=="y")
+    {
+
+    }
+    //------------------------
+    else    if(konfirstar=="n"||konfirstar=="N")
+            {
+                cout << "    ===================================================" << endl;
+                cout << "            Program KRS-KHS telah dihentikan," << endl;
+                cout << "        silakan tekan tombol apa saja untuk keluar." << endl;
+                cout << "    ===================================================" << endl;
+                return 0;
+            }
+            else
+            {
+                cout << "    ===================================================" << endl;
+                cout << "        Menginterpretasi input buram sebagai 'ya'" << endl;
+            }
+
+    cout << "    ===================================================" << endl;
+    cout << "      " << endl;
+
+    khs:
+    while (pilkul <= jumkul-1)
+    {
+        cout << "      " << matkul[pilkul] << endl;
+
+        ulgkhs1: //Ulang KHS
+        cout << endl;
+        cout << "         Masukkan persentase untuk" << endl;
+        cout << "         nilai tugas, UTS, & UAS mata kuliah ini." << endl;
+        cout << "         *Pisahkan dengan spasi." << endl;
+        cout << "         contoh : 40 30 30" << endl;
+        cout << "         >";
+        cin >> pTgs[pilkul] >> pMid[pilkul] >> pUas[pilkul];
+
+        pchd = pTgs[pilkul] + pMid[pilkul] + pUas[pilkul];
+
+        cout << endl;
+
+        if (pchd != 100)
+        {
+            cout << "    ===================================================" << endl;
+            cout << "            Nilai persentase harus bernilai 100" << endl;
+            cout << "                ketika dijumlahkan semuanya!" << endl;
+            cout << "    ===================================================" << endl;
+            cout << endl;
+            goto ulgkhs1;
+        }
+
+        ulgkhs2:
+        cout << "         Masukkan skor nilai" << endl;
+        cout << "         hasil tugas, UTS, & UAS mata kuliah ini." << endl;
+        cout << "         *Pisahkan dengan spasi." << endl;
+        cout << "         >";
+        cin >> nTgs[pilkul] >> nMid[pilkul] >> nUas[pilkul];
+
+        if ((nTgs[pilkul] > 100)||(nMid[pilkul] > 100)||(nUas[pilkul] > 100))
+        {
+            cout << "    ===================================================" << endl;
+            cout << "                  Skor nilai tidak boleh" << endl;
+            cout << "                 bernilai lebih dari 100!" << endl;
+            cout << "    ===================================================" << endl;
+            cout << endl;
+            goto ulgkhs2;
+        }
+
+        cout << "     -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -" << endl;
+
+        pilkul++;
+    }
+    pilkul = 0;
+
+
+    tanyaLast:
+    cout << endl;
+    cout << "      Apakah persentase & nilai yang terkait " << endl;
+    cout << "      dengan mata kuliah yang tertera diatas" << endl;
+    cout << "      sudah benar? (Y/N)" << endl;
+    cout << "      (jika tidak, maka proses input KHS" << endl;
+    cout << "      akan DIULANG)" << endl;
+    cout << "      >";
+    cin >> placeholder;
+
+    if ((placeholder=="y")||(placeholder=="Y"))
+    {
+        cout << endl;
+    }
+    else
+    if ((placeholder=="n")||(placeholder=="N"))
+    {
+        goto khs;
+    }
+    else
+    {
+        tdkValid();
+        goto tanyaLast;
+    }
+
+    cout << "    [================KARTU HASIL STUDI================]" << endl;
+    cout << "      Nama  : " << nama << endl;
+    cout << "      NIM   : " << kode << "." << tahun << "." << nim << endl;
+    cout << "      Kelp  : " << kode << "." << kelp << endl;
+    cout << "      Prodi : " << jursan << endl;
+
+    while (pilkul <= jumkul-1)
+    {
+        cout << "     -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -" << endl;
+        cout << "      " << matkul[pilkul] << endl;
+
+        totT[pilkul] = (pTgs[pilkul] / 100) * nTgs[pilkul];
+        totM[pilkul] = (pMid[pilkul] / 100) * nMid[pilkul];
+        totU[pilkul] = (pUas[pilkul] / 100) * nUas[pilkul];
+
+        cout << "        Nilai Tugas : " << nTgs[pilkul] << " x " << pTgs[pilkul] << "% = " << totT[pilkul] << endl;
+        cout << "        Nilai UTS   : " << nMid[pilkul] << " x " << pMid[pilkul] << "% = " << totM[pilkul] << endl;
+        cout << "        Nilai UAS   : " << nUas[pilkul] << " x " << pUas[pilkul] << "% = " << totU[pilkul] << endl;
+
+        totla[pilkul] = totT[pilkul] + totM[pilkul] + totU[pilkul];
+
+        cout << "        Total       : " << totla[pilkul] << endl;
+        pilkul++;
+    }
+    cout << "    [================KARTU HASIL STUDI================]" << endl;
+
+    pilkul = 0;
+    cout << endl;
+    cout << "      Apakah anda ingin menggunakan program ini lagi?" << endl;
+    cout << "      Apakah masih ada orang/mahasiswa yang hendak" << endl;
+    cout << "      menggunakan program ini? (Y/N)" << endl;
+    cout << "      >";
+    cin >> konfirstar;
+
+    if(konfirstar=="Y"||konfirstar=="y")
+    {
+        goto mulai;
+    }
+    //------------------------
+    else    if(konfirstar=="n"||konfirstar=="N")
+            {
+                cout << "    ===================================================" << endl;
+                cout << "            Program KRS-KHS telah dihentikan," << endl;
+                cout << "        silakan tekan tombol apa saja untuk keluar." << endl;
+                cout << "    ===================================================" << endl;
+                return 0;
+            }
+            else
+            {
+                cout << "    ===================================================" << endl;
+                cout << "       Input anda tidak valid, silakan coba lagi." << endl;
+                cout << "           Y = Ya                N = Tidak" << endl;
+                goto kronfimstar;
+            }
+}
+

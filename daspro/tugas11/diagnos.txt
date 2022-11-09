@@ -1,0 +1,120 @@
+//judul : diagnossssssssssssssss
+//jdul  : diagnosa 5 penyakit
+//tgl   : 9 okto 22
+//upd   : 16 okto 22 (bug fix)
+//oleh  : Risky Luthfan Maladzi
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+
+//kamus
+    string gejum;   //gejala umum
+    string gejus;   //gejala khusus
+    string diag;    //diagnosa
+    string konfir;  //konfirmasi pengulangan
+
+
+//deskripsi
+
+main()
+{
+    cout << endl;
+    cout << "=========================================" << endl;
+    cout << "    Diagnosa Keluhan Umum (Kesehatan)" << endl;
+    lagi:
+    cout << "=========================================" << endl;
+
+    cout << endl;
+    cout << "    Ketikkan salah satu gejala dibawah" << endl;
+    cout << "    ini yang sedang anda rasakan:" << endl << endl;
+    cout << "        + sulit bernafas" << endl;
+    cout << "        + demam" << endl << endl;
+    cout << "    >";
+    cin.ignore();
+    getline(cin, gejum);
+
+    cout << endl;
+    cout << "=========================================" << endl;
+    cout << endl;
+    cout << "    Apakah anda sedang mengalami" << endl;
+    cout << "    salah satu dari beberapa gejala" << endl;
+    cout << "    yang disebutkan dibawah ini?" << endl << endl;
+    cout << "        + batuk" << endl;
+    cout << "        + menggigil" << endl;
+    cout << "        + keringat berlebih" << endl;
+    cout << "        + nyeri sendi" << endl << endl;
+    cout << "    >";
+    getline(cin, gejus);
+
+    cout << endl;
+    cout << "=========================================" << endl;
+    cout << endl;
+    cout << "    Baiklah, sekali lagi." << endl;
+    cout << "    Ketikkan salah satu gejala dibawah" << endl;
+    cout << "    ini yang sedang anda rasakan:" << endl << endl;
+    cout << "        + diare" << endl;
+    cout << "        + kelelahan" << endl;
+    cout << "        + nyeri mata" << endl;
+    cout << "        + sesak nafas" << endl;
+    cout << "        + anemia" << endl << endl;
+    cout << "    >";
+
+    getline(cin, diag);
+
+    cout << endl;
+    cout << "=============[HASIL DIAGNOSA]============" << endl;
+    cout << endl;
+    cout << "    Berdasarkan sistem database kami," << endl;
+    cout << "    berikut yang dapat kami simpulkan:" << endl << endl;
+    cout << "      >>";
+
+    if ((gejum == "demam")&&(gejus == "nyeri sendi")&&(diag == "nyeri mata"))
+    {
+        cout << "DBD";
+    }
+    else    if ((gejum == "demam")&&(gejus == "batuk")&&(diag == "kelelahan"))
+            {
+                cout << "COVID-19";
+            }
+            else    if( (gejum == "demam")&&(gejus == "keringat berlebih")&&(diag == "diare"))
+                    {
+                        cout << "Tifus";
+                    }
+                    else    if ((gejum == "sulit bernafas")&&(gejus == "batuk")&&(diag == "sesak nafas"))
+                            {
+                                cout << "Asma";
+                            }
+                            else    if((gejum == "demam")&&(gejus == "menggigil")&&(diag == "anemia"))
+                                    {
+                                        cout << "Malaria";
+                                    }
+                                    else
+                                    {
+                                        cout << " -" << endl << endl;
+                                        cout << "    Maaf, keluhan yang anda sebutkan" << endl;
+                                        cout << "    tidak cocok dengan diagnosa manapun" << endl;
+                                        cout << "    yang ada dalam database kami.";
+                                    }
+    cout << endl << endl;
+    cout << "    Mohon hubungi dokter untuk" << endl;
+    cout << "    pemeriksaan lebih lanjut" << endl;
+
+    cout << endl;
+    cout << "=============[HASIL DIAGNOSA]============" << endl;
+    cout << endl;
+    cout << "    Apakah anda ingin melakukan" << endl;
+    cout << "    sesi konsultasi lagi? (Y/N)" << endl;
+    cout << "    >";
+    cin >> konfir;
+
+    while ((konfir == "y") or (konfir == "Y") or (konfir == "ya") or (konfir == "yes") or (konfir == "Ya"))
+    {
+        cout << endl;
+        goto lagi;
+    }
+    return 0;
+
+}
+
