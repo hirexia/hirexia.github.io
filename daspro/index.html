@@ -1,20 +1,192 @@
 <!DOCTYPE html>
 <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Language" content="ID">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hirexia's Hall - DasPro</title>
+        <link rel="stylesheet" href="../style.css">
+        <script>
+            $(window).load(function() {
+            $(".indicator").addClass('hidden');
+            $(".spinner").addClass('hidden');
+            });
+        </script>
+        <noscript>
+            <style>
+                .indicator {
+                    display: none;
+                }
+                .spinner {
+                    display: none;
+                }
+
+                @media (min-width: 650px) {
+    .row { width: 100%; display: table; table-layout: fixed; }
+    .col { display: table-cell; vertical-align: top;}
+}
+@media (max-width: 868px) {
+    .content {
+        padding: 0;
+    }
+    .window{
+        margin-top: 0px;
+    }
+    .navigation {
+        width: 25%;
+    }
+}
+@media (max-width: 650px) {
+    .desktop {display:none;}
+    .mobile {display:block;}
+    .mobileheading {display:block;}
+    .footer {
+        margin: 8px 24px 0 24px;
+    }
+    .main {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .navigation {
+        width: unset;
+    }
+    .sidebar {
+        width: unset;
+        padding-top: 0px;
+    }
+    .sidebar.wide {
+        padding-left: 24px;
+    }
+    .content {
+        padding: 1px 0px;
+    }
+    .window {
+        margin-top: 0px;
+        box-shadow: 0 1px 8px rgba(0,0,0,0.25),inset 0 -1px rgba(255,255,255,0.12),inset 0 1px rgba(255,255,255,0.12);
+        border: 0;
+        border-bottom: 1px solid rgba(0,0,0,.50);
+        border-top: 1px solid rgba(0,0,0,.50);
+    }
+}
+            </style>
+        </noscript>
 
 </head>
 <body>
-    <article>
-        <p><a href="tugas1/biodata.txt">tugas1 pengenalan diri</a></p>
-        <p><a href="tugas2/nasgor.txt">tugas2 nasgor</a></p>
-        <p><a href="tugas3/tugas.pdf">tugas3 penjumlahan</a></p>
-        <p><a href="tugas4/tugas.pdf">tugas4 pengenalan diri</a></p>
-        <p><a href="tugas5/tugas.pdf">tugas5 laki perempuan if else</a></p>
-        <p><a href="tugas6/tugas.pdf">tugas6 aritmatika</a></p>
-        <p><a href="tugas7/cpp.txt">tugas7 perangkingan 5 angka</a></p>
-        <p><a href="tugas8/cpp.txt">tugas8 diagnosa</a></p>
-        <p><a href="tugas9/tugas.pdf">tugas9 fakultas prodi</a></p>
-        <p><a href="tugas10/tugas.pdf">tugas10 kelipatan 6 loop</a></p>
-        <p><a href="tugas11/diagnos.txt">tugas11 diagnosa</a></p>
-        <p><a href="tugas11/krs.txt">tugas11 krs-khs</a></p>
-    </article>
-</body>
+    <div class="content">
+        
+        <div class="window">
+            <div class="statusbar">
+                <ul>
+                    <a class="white" href="/"><li class="logo">Hirexia's Hall</li></a>
+                    <li class="active">Dasar Pemrograman</li></a>
+                    <li class="spinner"></li>
+                </ul>
+                <ul class="right">
+                    <script>document.write ('<a class="white" href="https://openbooks.neocities.org"><li>Template by Openbooks</li></a>');</script>
+                    <noscript>
+                        <a class="white" href="https://openbooks.neocities.org"><li>Source code</li></a>
+                    </noscript>
+                </ul>
+            </div>
+            
+            <div class="desktop row">
+                <div class="col navigation">
+                    
+                </div>
+                <div class="col heading">
+                    Dasar-Dasar Pemrograman
+                </div>
+            </div>
+            <div class="mobileheading">
+                Dasar-Dasar Pemrograman
+            </div>
+            <div class="row">
+                <div class="col navigation">
+                    <ul>
+                        <a href="../pemweb"><li class="sub">Pemrograman Web</li></a>
+                        <li class="active">Dasar-Dasar Pemrograman</li></a>
+                        <a href="../harian"><li class="sub">Catatan Harian</li></a>
+                    </ul>
+                </div>
+                
+                <div class="col main">
+
+                    <p id="copy">cpp ftw lolmao gogogo.</p>
+                    
+                    <div class="box">
+
+                        <h3>Tugas 1 - Pengenalan Diri</h3>
+                        <p>
+                            <a href="tugas1/biodata.txt" class="button">biodata.cpp</a>
+                            <a href="tugas1/preview.png" class="button">preview.png</a>
+                        </p>
+
+
+                        <h3>Tugas 2 - Algoritma Memasak Nasi Goreng</h3>
+                        <p>
+                            <a href="tugas2/nasgor.txt" class="button">nasgor.txt</a>
+                        </p>
+
+
+                        <h3>Tugas 3 - Penjumlahan</h3>
+                        <p>
+                            <a href="tugas3/tugas.pdf" class="button">tugas3.pdf</a>
+                        </p>
+
+
+                        <h3>Tugas 4 - Pengenalan Diri (2)</h3>
+                        <p>
+                            <a href="tugas4/tugas.pdf" class="button">tugas4.pdf</a>
+                        </p>
+                    
+
+                        <h3>Tugas 5 - Laki/Perempuan if-else</h3>
+                        <p>
+                            <a href="tugas5/tugas.pdf" class="button">tugas5.pdf</a>
+                        </p>
+
+                        
+                        <h3>Tugas 6 - Program Aritmatika</h3>
+                        <p>
+                            <a href="tugas6/tugas.pdf" class="button">tugas6.pdf</a>
+                        </p>
+
+
+                        <h3>Tugas 7 - Perankingan 5 Angka</h3>
+                        <p>
+                            <a href="tugas7/cpp.txt" class="button">Perankingan5Angka.cpp</a>
+                        </p>
+                        
+
+                        <h3>Tugas 8 - Diagnosa Penyakit</h3>
+                        <p>
+                            <a href="tugas8/diagnos.txt" class="button">diagnos.cpp</a>
+                        </p>
+                        
+
+                        <h3>Tugas 9 - Fakultas Prodi</h3>
+                        <p>
+                            <a href="tugas9/tugas.pdf" class="button">tugas9.pdf</a>
+                        </p>
+                        
+
+                        <h3>Tugas 10 - Kelipatan 6 Loop</h3>
+                        <p>
+                            <a href="tugas10/tugas.pdf" class="button">tugas10.pdf</a>
+                        </p>
+                        
+
+                        <h3>Tugas 11 - Diagnosa (copy) & KRS-KHS</h3>
+                        <p>
+                            <a href="tugas8/diagnos.txt" class="button">redirect-to-tugas8</a>
+                            <a href="tugas11/krs.txt" class="button">krs.cpp</a>
+                        </p>
+                    </div>
+                </div>
+            </div class="footer">
+                <br>
+                <p style="color: rgba(255,255,255,0.5); text-align:center;">Maladzi, 2022</p>
+            </div>
+    </body>
+</html>
