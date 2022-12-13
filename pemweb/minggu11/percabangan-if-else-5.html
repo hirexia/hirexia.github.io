@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Loop - Javascript S2</title> 
+</head> 
+<body>
+    <h1>javascrip season2 (Perulangan)</h1>
+
+ 
+
+    <script> 
+        var counter = 0; 
+        var ulangi = confirm("Apakah anda mau mengulang untuk yang ke-"+ counter +" kalinya?"); 
+        
+        
+        while(ulangi){ 
+            counter++; 
+            
+            ulangi = confirm("Apakah anda mau mengulang untuk yang ke-"+ counter +" kalinya?"); 
+            /*
+            var jawab = confirm("Apakah anda mau mengulang untuk yang ke-"+ counter +" kalinya?") 
+            
+            if(jawab == false){ 
+                ulangi = false; 
+            }*/
+
+        } 
+        
+        document.write("Perulangan sudah dilakuakn sebanyak "+ counter +" kali");
+    </script>
+</body>
+</html>
