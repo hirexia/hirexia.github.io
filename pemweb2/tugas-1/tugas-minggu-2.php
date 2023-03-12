@@ -5,6 +5,13 @@
     </head>
 
     <body>
+        <!--
+            Risky Luthfan Maladzi
+            A11.2022.14734
+            Pemrograman Web Lanjut
+            Week 2
+            Tugas 1    
+        -->
         <h2>Soal 1</h2>
             <ul>
             <p><i>Buatlah sebuah program PHP yang menggunakan perulangan while untuk mencetak angka 1 sampai dengan 10!</i></p>
